@@ -1,3 +1,10 @@
+#Install shopify
+#1) Download the latest .deb from github
+wget --no-check-certificate --content-disposition https://github.com/Shopify/shopify-cli/releases/download/v2.3.0/shopify-cli-2.3.0.deb
+
+#2)Install the downloaded .deb package
+sudo apt install /home/rbekeris/Code/Shipify/shopify-cli-2.3.0.deb
+
 #help
 shopify help
 shopify node --help
@@ -27,3 +34,26 @@ shopify node serve
 
 #Stop the app
 shopify node tunnel stop
+
+#-------------------------------------------------
+#Shopify Node.js commands
+
+#Help
+Shopify node [command] -h
+
+#connect -> re-creates projects .env and .shopify-cli.jml
+#This is needed if working on many computers or mandy devs
+shopify node connect
+
+#deploy to heroku 
+shopify node deploy heroku
+
+#open the app in browser
+shopify node open
+
+#Start local dev and serve it to shopify trough heroku
+shopify node serve
+
+#stop the local node
+shopify node tunnel stop
+
