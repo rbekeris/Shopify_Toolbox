@@ -1,0 +1,29 @@
+#help
+shopify help
+shopify node --help
+shopify deploy --help
+shopify <command> --help
+
+#login
+shopify login --store=StoreName
+
+#populate products
+shopify populate products
+
+#populate customers (with name only)
+shopify populate customers 
+
+#populate draft orders (with one custom item)
+shopify populate draftorders
+
+#modify how many populated records/clients/orders/products are created
+shopify populate products --99
+
+#create node app scaffold (creates subdirectory in the cdir)
+shopify node create -n APP_Name
+
+#Start the app (need to be inside the app dir)
+shopify node serve
+
+#Stop the app
+shopify node tunnel stop
